@@ -1,5 +1,4 @@
-const path = require("path")
-const router = require("express").router();
+const fs = require("fs")
 
 app.get("/api/notes", function(req, res) {
     res.json(notes);
@@ -21,5 +20,12 @@ app.delete("/api/notes/:id", function(req, res) {
     updateDb();
     console.log("Deleted note with id "+req.params.id);
 });
+
+function updateDb() {
+    fs.writeFile("db/db.json",JSON.stringify(notes,'\t'),err => {
+        if (err) throw err;
+        return true;
+    });
+}
 
 module.exports = router;
