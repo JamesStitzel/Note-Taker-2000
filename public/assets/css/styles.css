@@ -5,6 +5,24 @@ body {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5 , h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1.display-4 {
+  font-size: 50pt;
+  letter-spacing: 1.5pt;
+}
+
+h4.subtitle {
+  font-size: 30pt;
+  letter-spacing: 1pt;
+}
+
+.nav-bg {
+  background-color: rgb(0, 174, 255) !important;
+}
+
 .save-note {
   display: none;
 }
@@ -39,6 +57,10 @@ body {
 .note-title:read-only,
 .note-textarea:read-only {
   color: #757575;
+}
+
+.container-bg {
+  background-color: whitesmoke;
 }
 
 .list-container .card {

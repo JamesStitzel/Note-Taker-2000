@@ -1,31 +1,27 @@
-const fs = require("fs")
+const router = require('express').Router();
 
-app.get("/api/notes", function(req, res) {
-    res.json(notes);
+const saveData = require('../db/saveData');
+
+router.get('/notes', function (req, res) {
+    saveData
+        .retrieveNotes()
+        .then(notes => res.json(notes))
+        .catch(err => res.status(500).json(err));
 });
 
-app.post("/api/notes", function(req, res) {
-    let newNote = req.body;
-    notes.push(newNote);
-    updateDb();
-    return console.log("Added new note: "+newNote.title);
+router.post('/notes', (req, res) => {
+    saveData
+        .addNote(req.body)
+        .then((note) => res.json(note))
+        .catch(err => res.status(500).json(err));
 });
 
-app.get("/api/notes/:id", function(req,res) {
-    res.json(notes[req.params.id]);
+router.delete('/notes/:id', function (req, res) {
+    saveData
+        .deleteNote(req.params.id)
+        .then(() => res.json({ ok: true }))
+        .catch(err => res.status(500).json(err));
 });
 
-app.delete("/api/notes/:id", function(req, res) {
-    notes.splice(req.params.id, 1);
-    updateDb();
-    console.log("Deleted note with id "+req.params.id);
-});
-
-function updateDb() {
-    fs.writeFile("db/db.json",JSON.stringify(notes,'\t'),err => {
-        if (err) throw err;
-        return true;
-    });
-}
 
 module.exports = router;
