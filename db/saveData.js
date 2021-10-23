@@ -29,7 +29,7 @@ class Save {
     addNote(note) {
         const { title, text } = note;
         if (!title || !text) {
-            throw new Error('Both title and text can not be blank');
+            throw new Error('One of the text areas is blank');
         }
 
         const newNote = { title, text, id: uuidv4() };
