@@ -1,15 +1,22 @@
 {
-  "name": "note-taker",
-  "version": "1.0.0",
-  "description": "",
+  "name": "note-taker-2000",
+  "version": "5.0.0",
+  "description": "A simple note taking application that uses express",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "James Stitzel",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
-    "uuid": "^8.3.2"
+    "inquirer": "^7.3.3",
+    "uuid": "^8.3.0",
+    "v1": "^1.0.0",
+    "v4": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesStitzel/Note-Taker-2000.git"
   }
 }

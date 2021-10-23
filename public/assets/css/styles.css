@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -8,21 +7,12 @@ body {
 h1, h2, h3, h4, h5 , h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
-
+  
 h1.display-4 {
   font-size: 50pt;
   letter-spacing: 1.5pt;
 }
-
-h4.subtitle {
-  font-size: 30pt;
-  letter-spacing: 1pt;
-}
-
-.nav-bg {
-  background-color: rgb(0, 174, 255) !important;
-}
-
+  
 .save-note {
   display: none;
 }
@@ -34,8 +24,7 @@ h4.subtitle {
   cursor: pointer;
 }
 
-.note-textarea,
-.note-title {
+.note-textarea, .note-title {
   color: #000000;
   width: 100%;
   outline: none;
@@ -54,13 +43,8 @@ h4.subtitle {
   font-size: 3rem;
 }
 
-.note-title:read-only,
-.note-textarea:read-only {
+.note-title:read-only, .note-textarea:read-only {
   color: #757575;
-}
-
-.container-bg {
-  background-color: whitesmoke;
 }
 
 .list-container .card {
@@ -82,11 +66,6 @@ h4.subtitle {
   border-top-left-radius: 0;
 }
 
-.list-item-title {
-  display: inline-block;
-  width: 75%;
-}
-
 .list-container i {
   font-size: 1.1rem;
   cursor: pointer;
@@ -95,6 +74,17 @@ h4.subtitle {
 .list-container .list-group-item {
   border-left: none;
   border-right: none;
-  padding: 20px;
+  padding: 15px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24pt;
+  letter-spacing: 1pt;
+}
+
+.nav-bg {
+  background-color: #856c8b !important;
+}
+
+.container-bg {
+  background-color: #f4eeff;
 }

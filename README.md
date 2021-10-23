@@ -22,7 +22,7 @@ This application is covered by the MIT license.
 ## Tests
  npm test
 ## The user should know
- Were not responsible for any data loss<br />
+ We're not responsible for any data loss<br />
 <br />
 Find me on GitHub: [JamesStitzel](https://github.com/JamesStitzel)<br />
 <br />
